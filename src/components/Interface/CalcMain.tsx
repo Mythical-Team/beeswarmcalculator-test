@@ -72,13 +72,13 @@ function Main() {
             <Link to="/">
               <span />
             </Link>
-            <Link to="/planner">
+            <Link to="/hive-planner">
               <span />
             </Link>
-            <Link to="/calculator">
+            <Link to="/recipe-calculator">
               <span />
             </Link>
-            <Link to="/bond">
+            <Link to="/bond-calculator">
               <span />
             </Link>
             <div
