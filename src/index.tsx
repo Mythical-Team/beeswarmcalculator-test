@@ -6,7 +6,7 @@ import App from "./App";
 import PlannerMain from "components/Interface/PlannerMain";
 import CalcMain from "components/Interface/CalcMain";
 import BondMain from "components/Interface/BondMain";
-import TicketCalc from "src/components/Interface/TicketCalc/TicketCalc.tsx";
+import TicketCalc from "components/Interface/TicketCalc/TicketCalc.tsx";
 
 const router = createBrowserRouter([
   {
