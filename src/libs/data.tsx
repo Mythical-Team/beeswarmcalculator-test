@@ -79,6 +79,26 @@ export const inventoryItems: itemTypes = [
     name: "Turpentine",
     image: "Turpentine.png",
   },
+  {
+    name: "Comforting Vial",
+    image: "ComfortingVial.jpg",
+  },
+  {
+    name: "Invigorating Vial",
+    image: "InvigoratingVial.jpg",
+  },
+  {
+    name: "Motivating Vial",
+    image: "MotivatingVial.jpg",
+  },
+  {
+    name: "Refreshing Vial",
+    image: "RefreshingVial.jpg",
+  },
+  {
+    name: "Satisfying Vial",
+    image: "SatisfyingVial.jpg",
+  },
 ];
 
 // MATERIALS //
@@ -162,6 +182,14 @@ export const masks: itemTypes = [
     image: "HoneyMask.png",
   },
   {
+    name: "Bubble",
+    image "BubbleMask.png",
+  },
+  {
+    name: "Fire",
+    image: "FireMask.png"
+  },
+  {
     name: "Gummy",
     image: "GummyMask.png",
   },
@@ -216,6 +244,118 @@ export const maskRecipes: recipe = [
       },
       { material: "Gold Eggs", value: 5, image: "GoldEgg.png" },
     ],
+  },
+  {
+    bubble: [
+      { material: "Honey", value: 100000000, image: "Honey.png" },
+      { material: "Blueberries", value: 500, image: "Blueberries.png" },
+      {
+        material: "Blue Extract", 
+        value: 50, 
+        image: "BlueExtract.png", 
+        subRecipe: [
+          {
+            material: "Blueberries", 
+            value: 50, 
+            image: "Blueberries.png", 
+          }, 
+          {
+            material: "Royal Jelly", 
+            value: 10, 
+            image: "RoyalJelly.png", 
+           },
+          ],
+      }, 
+      {
+         material: "Oil",
+        value: 25,
+        image: "Oil.png",
+        subRecipe: [
+          {
+            material: "Sunflower Seeds",
+            value: 50,
+            image: "SunflowerSeeds.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Glitter",
+        value: 15,
+        image: "Glitter.png",
+        subRecipe: [
+          {
+            material: "Moon Charms",
+            value: 25,
+            image: "Moon.png",
+          },
+          {
+            material: "Magic Bean",
+            value: 1,
+            image: "MagicBean.png",
+          },
+        ],
+      },
+  },
+  {
+    fire: [
+      { material: "Honey", value: 100000000, image: "Honey.png" },
+      { material: "Straberries", value: 500, image: "Strawberries.png" },
+      {
+        material: "Red Extract", 
+        value: 50, 
+        image: "Red Extract.png", 
+        subRecipe: [
+          {
+            material: "Strawberries", 
+            value: 50, 
+            image: "Strawberries.png", 
+          }, 
+          {
+            material: "Royal Jelly", 
+            value: 10, 
+            image: "RoyalJelly.png", 
+           },
+         ],
+      }, 
+      {
+         material: "Enzymes",
+        value: 25,
+        image: "Enzymes.png",
+        subRecipe: [
+          {
+            material: "Pineapple",
+            value: 50,
+            image: "Pineapple.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+            {
+        material: "Glue",
+        value: 15,
+        image: "Glue.png",
+        subRecipe: [
+          {
+            material: "Gumdrops",
+            value: 50,
+            image: "Gumdrops.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
   },
   {
     gummy: [
