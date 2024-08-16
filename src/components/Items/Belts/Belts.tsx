@@ -20,6 +20,10 @@ function Belts() {
 
       case 2:
         return setRecipeData(beltRecipes[2].petal);
+
+      case 3:
+        return setRecipeData(beltRecipes[3].coconut);
+
     }
   }, [beltSelection]);
 
