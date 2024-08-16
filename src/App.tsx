@@ -43,13 +43,13 @@ function App() {
           <Link to="/planner">
             <span />
           </Link>
-          <Link to="/calculator">
+          <Link to="/recipe-calculator">
             <span />
           </Link>
           <Link to="/bond">
             <span />
           </Link>
-          <Link to="/changelog">
+          <Link to="/ticket-calculator">
             <span />
           </Link>
           <div
