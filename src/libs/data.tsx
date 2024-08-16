@@ -357,6 +357,7 @@ export const maskRecipes: recipe = [
           },
         ],
       },
+    ],
   },
   {
     gummy: [
