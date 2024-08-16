@@ -212,7 +212,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .main-title::after {
-  content: "Bee Swarm Sim Tools";
+  content: "Tools for Bee Swarm Simulator";
 }
 
 .main-subtitle {
