@@ -309,7 +309,7 @@ export const maskRecipes: recipe = [
       {
         material: "Red Extract", 
         value: 50, 
-        image: "Red Extract.png", 
+        image: "RedExtract.png", 
         subRecipe: [
           {
             material: "Strawberries", 
