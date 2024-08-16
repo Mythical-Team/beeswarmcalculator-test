@@ -1229,7 +1229,7 @@ export const beltRecipes: recipe = [
   {
   coconut: [
     { material: "Honey", value: 7500000000, image: "Honey.png" },
-    { material: "Coconuts", value: 500, image: "Coconut.png" },
+    { material: "Coconuts", value: 500, image: "Coconuts.png" },
     {
       material: "Tropical Drink",
       value: 1500,
