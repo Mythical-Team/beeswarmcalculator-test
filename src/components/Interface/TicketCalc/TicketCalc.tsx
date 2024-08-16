@@ -23,18 +23,18 @@ const MyComponent = () => {
   };
 
   const calculatePriceOfNext10 = (D3Value: number, totalTicketsBought: number): number => {
-    // Replace with actual calculation logic
-    return 0; // Placeholder
+    // Replace with actual calculation logic based on your specific requirements
+    return 10000; // Placeholder
   };
 
   const calculatePriceOfNext100 = (D3Value: number, totalTicketsBought: number): number => {
-    // Replace with actual calculation logic
-    return 0; // Placeholder
+    // Replace with actual calculation logic based on your specific requirements
+    return 100000; // Placeholder
   };
 
   const calculatePriceOfNext500 = (D3Value: number, totalTicketsBought: number): number => {
-    // Replace with actual calculation logic
-    return 0; // Placeholder
+    // Replace with actual calculation logic based on your specific requirements
+    return 500000; // Placeholder
   };
 
   const handleD3Change = (event: React.ChangeEvent<HTMLInputElement>) => {
