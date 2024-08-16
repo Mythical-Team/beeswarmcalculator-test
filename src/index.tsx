@@ -6,7 +6,6 @@ import App from "./App";
 import PlannerMain from "components/Interface/PlannerMain";
 import CalcMain from "components/Interface/CalcMain";
 import BondMain from "components/Interface/BondMain";
-import TicketCalc from "components/Interface/TicketCalc/TicketCalc.tsx";
 
 const router = createBrowserRouter([
   {
@@ -28,10 +27,6 @@ const router = createBrowserRouter([
   {
     path: "/bond-calculator",
     element: <BondMain />,
-  },
-  {
-    path: "/ticket-calculator",
-    element: <TicketCalc />,
   },
 ]);
 
