@@ -11,19 +11,42 @@ const MyComponent = () => {
   const [D3, setD3] = useState<string>('');
   const [ticketPriceData, setTicketPriceData] = useState<TicketPriceData | null>(null);
 
-  const calculateTicketPriceData = (D3Value: number): TicketPriceData => {
-    // Replace with actual calculations based on the provided formulas
-    const totalTicketsBought = calculateTotalTicketsBought(D3Value); // Placeholder
-    const priceOfNext10 = calculatePriceOfNext10(D3Value, totalTicketsBought); // Placeholder
-    const priceOfNext100 = calculatePriceOfNext100(D3Value, totalTicketsBought); // Placeholder
-    const priceOfNext500 = calculatePriceOfNext500(D3Value, totalTicketsBought); // Placeholder
-    return { totalTicketsBought, priceOfNext10, priceOfNext100, priceOfNext500 };
+  const calculateTotalTicketsBought = (D3Value: number): number => {
+    if (D3Value === 100000) {
+      return 0;
+    } else if (D3Value < 102000) {
+      return 1;
+    } else {
+      const exponent = D3Value <= 1824000 ? 5 / 6 : 10 / 17;
+      return Math.floor(Math.pow((D3Value / 1000 - 100), exponent)) + 1;
+    }
+  };
+
+  const calculatePriceOfNext10 = (D3Value: number, totalTicketsBought: number): number => {
+    // Replace with actual calculation logic
+    return 0; // Placeholder
+  };
+
+  const calculatePriceOfNext100 = (D3Value: number, totalTicketsBought: number): number => {
+    // Replace with actual calculation logic
+    return 0; // Placeholder
+  };
+
+  const calculatePriceOfNext500 = (D3Value: number, totalTicketsBought: number): number => {
+    // Replace with actual calculation logic
+    return 0; // Placeholder
   };
 
   const handleD3Change = (event: React.ChangeEvent<HTMLInputElement>) => {
     const D3Value = parseInt(event.target.value, 10);
     setD3(event.target.value);
-    setTicketPriceData(calculateTicketPriceData(D3Value));
+
+    const totalTicketsBought = calculateTotalTicketsBought(D3Value);
+    const priceOfNext10 = calculatePriceOfNext10(D3Value, totalTicketsBought);
+    const priceOfNext100 = calculatePriceOfNext100(D3Value, totalTicketsBought);
+    const priceOfNext500 = calculatePriceOfNext500(D3Value, totalTicketsBought);
+
+    setTicketPriceData({ totalTicketsBought, priceOfNext10, priceOfNext100, priceOfNext500 });
   };
 
   return (
