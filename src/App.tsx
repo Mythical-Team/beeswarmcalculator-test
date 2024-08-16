@@ -40,16 +40,13 @@ function App() {
           <Link to="/">
             <span />
           </Link>
-          <Link to="/planner">
+          <Link to="/hive-planner">
             <span />
           </Link>
           <Link to="/recipe-calculator">
             <span />
           </Link>
-          <Link to="/bond">
-            <span />
-          </Link>
-          <Link to="/ticket-calculator">
+          <Link to="/bond-calculator">
             <span />
           </Link>
           <div
