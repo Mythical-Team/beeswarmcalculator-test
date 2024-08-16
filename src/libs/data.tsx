@@ -183,7 +183,7 @@ export const masks: itemTypes = [
   },
   {
     name: "Bubble",
-    image "BubbleMask.png",
+    image: "BubbleMask.png",
   },
   {
     name: "Fire",
