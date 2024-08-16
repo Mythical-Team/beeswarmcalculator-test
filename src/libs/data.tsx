@@ -300,7 +300,7 @@ export const maskRecipes: recipe = [
           },
         ],
       },
-  },
+  };
   {
     fire: [
       { material: "Honey", value: 100000000, image: "Honey.png" },
