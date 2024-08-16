@@ -16,13 +16,19 @@ function Masks() {
         return setRecipeData(maskRecipes[0].honey);
 
       case 1:
-        return setRecipeData(maskRecipes[1].gummy);
+        return setRecipeData(maskRecipes[1].bubble);
 
       case 2:
-        return setRecipeData(maskRecipes[2].diamond);
+        return setRecipeData(maskRecipes[2].fire);
 
       case 3:
-        return setRecipeData(maskRecipes[3].demon);
+        return setRecipeData(maskRecipes[3].gummy);
+
+      case 4:
+        return setRecipeData(maskRecipes[4].diamond);
+
+      case 5:
+        return setRecipeData(maskRecipes[5].demon);
     }
   }, [maskSelection]);
 
