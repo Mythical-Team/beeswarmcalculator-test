@@ -17,16 +17,20 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/calculator",
+    path: "/recipe-calculator",
     element: <CalcMain />,
   },
   {
-    path: "/planner",
+    path: "/hive-planner",
     element: <PlannerMain />,
   },
   {
-    path: "/bond",
+    path: "/bond-calculator",
     element: <BondMain />,
+  },
+  {
+    path: "/ticket-calculator",
+    element: <TicketCalc />,
   },
 ]);
 
