@@ -2653,17 +2653,17 @@ export const toolSelection = [
   {
     name: "Hive planner",
     img: "Hive/Tools/Planner.png",
-    path: "/planner",
+    path: "/hive-planner",
   },
   {
     name: "Recipe calculator",
     img: "Hive/Tools/Calculator.png",
-    path: "/calculator",
+    path: "/recipe-calculator",
   },
   {
     name: "Bond calculator",
     img: "Hive/Tools/Bond.png",
-    path: "/bond",
+    path: "/bond-calculator",
   },
   {
     name: "Amulet Appraiser",
