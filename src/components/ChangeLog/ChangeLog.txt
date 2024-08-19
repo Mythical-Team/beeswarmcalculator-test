@@ -1,0 +1,35 @@
+-CHANGELOG-
+
+  v1.3.1 (19/8/2024)
+    • Fixed Fire Mask being bugged (tool selection recipe is bugged)
+
+
+
+
+  v1.3.0 (17/8/2024)
+    • Fixed homepage image hyperlinks not working
+
+
+
+
+  v1.2.0 (16/8/2024)
+    • Added Fire Mask and Bubble Mask to the Recipe Calculator (Fire Mask is bugged)
+
+
+
+
+  v1.1.2 (15/8/2024)
+    • Changed dropdown menu hyperlinks (homepage image hyperlink do not work)
+
+  v1.1.1 (15/8/2024)
+    • Fixed Coconut Belt price not updating
+
+  v1.1.0 (14/8/2024)
+    • Added Coconut Belt to recipe calculator (Price does not update)
+
+
+
+
+  v1.0.0 (13/8/2024)
+    • Copied and pasted source code from bss-tools.netlify.app
+    • Official handover of website updates  
