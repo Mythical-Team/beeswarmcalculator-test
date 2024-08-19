@@ -553,6 +553,10 @@ export const maskRecipes: recipe = [
 
 export const tools: itemTypes = [
   {
+    name: "Testing Item",
+    image: "debug.png",
+  },
+  {
     name: "Petal Wand",
     image: "PetalWand.png",
   },
@@ -571,6 +575,11 @@ export const tools: itemTypes = [
 ];
 
 export const toolRecipes: recipe = [
+  {
+    testing item: [
+      { material: "Honey", value: 99999999999999, image: "Honey.png" },
+    ]
+  },    
   {
     petal: [
       { material: "Honey", value: 1500000000, image: "Honey.png" },
