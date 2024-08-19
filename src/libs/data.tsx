@@ -553,7 +553,7 @@ export const maskRecipes: recipe = [
 
 export const tools: itemTypes = [
   {
-    name: "Testing Item",
+    name: "debug",
     image: "debug.png",
   },
   {
@@ -576,7 +576,7 @@ export const tools: itemTypes = [
 
 export const toolRecipes: recipe = [
   {
-    TestingItem: [
+    debug: [
       { material: "Honey", value: 99999999999999, image: "Honey.png" },
     ]
   },    
