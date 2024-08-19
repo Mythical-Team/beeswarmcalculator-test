@@ -83,7 +83,7 @@ function App() {
             />
           </div>
           <div className={theme ? "main-subtitle dark-font" : "main-subtitle"}>
-            Tools to help you while playing Bee Swarm Sim.
+            Tools to help you while you are playing Bee Swarm Simulator
           </div>
           <div
             className={theme ? "main-items-container" : "main-items-container"}
