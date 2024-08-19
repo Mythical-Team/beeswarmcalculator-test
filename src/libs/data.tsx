@@ -305,7 +305,7 @@ export const maskRecipes: recipe = [
   {
     fire: [
       { material: "Honey", value: 100000000, image: "Honey.png" },
-      { material: "Straberries", value: 500, image: "Strawberries.png" },
+      { material: "Strawberries", value: 500, image: "Strawberries.png" },
       {
         material: "Red Extract", 
         value: 50, 
@@ -315,7 +315,7 @@ export const maskRecipes: recipe = [
             material: "Strawberries", 
             value: 50, 
             image: "Strawberries.png", 
-          }, 
+          },
           {
             material: "Royal Jelly", 
             value: 10, 
