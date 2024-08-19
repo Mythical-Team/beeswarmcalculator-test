@@ -576,7 +576,7 @@ export const tools: itemTypes = [
 
 export const toolRecipes: recipe = [
   {
-    testing.item: [
+    TestingItem: [
       { material: "Honey", value: 99999999999999, image: "Honey.png" },
     ]
   },    
