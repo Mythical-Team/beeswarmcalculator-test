@@ -2673,7 +2673,7 @@ export const toolSelection = [
   {
     name: "Change Log",
     path: "/changelog",
-  {
+  },
     name: "Amulet Appraiser",
     img: "Hive/Tools/ComingSoon.png",
     path: "",
