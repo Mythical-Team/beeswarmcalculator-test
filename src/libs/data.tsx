@@ -2671,6 +2671,9 @@ export const toolSelection = [
     path: "/bond-calculator",
   },
   {
+    name: "Change Log"
+    path: "/changelog"
+  {
     name: "Amulet Appraiser",
     img: "Hive/Tools/ComingSoon.png",
     path: "",
