@@ -6,7 +6,6 @@ import App from "./App";
 import PlannerMain from "components/Interface/PlannerMain";
 import CalcMain from "components/Interface/CalcMain";
 import BondMain from "components/Interface/BondMain";
-import ChangeLog from "components/Interface/ChangeLog";
 
 const router = createBrowserRouter([
   {
