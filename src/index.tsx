@@ -28,10 +28,6 @@ const router = createBrowserRouter([
     path: "/bond-calculator",
     element: <BondMain />,
   },
-  {
-    path: "changelog",
-    element: <ChangeLog />
-  },
 ]);
 
 const root = ReactDOM.createRoot(
