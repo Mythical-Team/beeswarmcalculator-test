@@ -8,6 +8,10 @@ export const inventoryItems: itemTypes = [
     image: "Honey.png",
   },
   {
+    name: "Micro-Converter",
+    image: "MicroConverter.png",
+  },
+  {
     name: "Red Extract",
     image: "RedExtract.png",
   },
@@ -553,6 +557,10 @@ export const maskRecipes: recipe = [
 
 export const tools: itemTypes = [
   {
+    name: "Sticker-Seeker",
+    image: "StickerSeeker.png",
+  },
+  {
     name: "Petal Wand",
     image: "PetalWand.png",
   },
@@ -571,6 +579,73 @@ export const tools: itemTypes = [
 ];
 
 export const toolRecipes: recipe = [    
+  {
+    sticker-seeker: [
+      { material: "Honey", value: 7000000, image: "Honey.png" },
+      {
+        material: "Glue",
+        value: 1,
+        image: "Glue.png",
+        subRecipe: [
+          {
+            material: "Gumdrops",
+            value: 50,
+            image: "Gumdrops.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Oil",
+        value: 1,
+        image: "Oil.png",
+        subRecipe: [
+          {
+            material: "Sunflower Seeds",
+            value: 50,
+            image: "SunflowerSeeds.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      {
+        material: "Soft Wax",
+        value: 5,
+        image: "SoftWax.png",
+        subRecipe: [
+          {
+            material: "Honeysuckle",
+            value: 5,
+            image: "HoneySuckle.png",
+          },
+          {
+            material: "Oil",
+            value: 1,
+            image: "Oil.png",
+          },
+          {
+            material: "Enzymes",
+            value: 1,
+            image: "Enzymes.png",
+          },
+          {
+            material: "Royal Jelly",
+            value: 10,
+            image: "RoyalJelly.png",
+          },
+        ],
+      },
+      { material: "Neonberries", value: 5, image: "NeonBerries.png" },
+      { material: "Micro-Converter", value: 10, image: "MicroConverter.png" },
+  },
   {
     petal: [
       { material: "Honey", value: 1500000000, image: "Honey.png" },
