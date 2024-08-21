@@ -7,7 +7,7 @@ import { recipeMaterial } from "libs/types";
 function Tools() {
   const [toolSelection, setToolSelection] = useState(0);
   const [recipeData, setRecipeData] = useState<recipeMaterial[]>(
-    toolRecipes[0].
+    toolRecipes[0].stickerseeker
   );
 
   useEffect(() => {
