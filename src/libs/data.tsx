@@ -557,7 +557,7 @@ export const maskRecipes: recipe = [
 
 export const tools: itemTypes = [
   {
-    name: "Sticker-Seeker",
+    name: "Sticker Seeker",
     image: "StickerSeeker.png",
   },
   {
@@ -580,7 +580,7 @@ export const tools: itemTypes = [
 
 export const toolRecipes: recipe = [    
   {
-    stickerseeker: [
+    sticker: [
       { material: "Honey", value: 7000000, image: "Honey.png" },
       {
         material: "Glue",
