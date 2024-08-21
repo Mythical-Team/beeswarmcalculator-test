@@ -1019,7 +1019,7 @@ export const toolRecipes: recipe = [
       },
     ],
   },
-];
+
 
 // BAGS //
 
