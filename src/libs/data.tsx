@@ -645,7 +645,7 @@ export const toolRecipes: recipe = [
       },
       { material: "Neonberries", value: 5, image: "NeonBerries.png" },
       { material: "Micro-Converter", value: 10, image: "MicroConverter.png" },
-    ];
+    ],
   },
   {
     petal: [
