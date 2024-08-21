@@ -580,7 +580,7 @@ export const tools: itemTypes = [
 
 export const toolRecipes: recipe = [    
   {
-    sticker-seeker: [
+    stickerseeker: [
       { material: "Honey", value: 7000000, image: "Honey.png" },
       {
         material: "Glue",
