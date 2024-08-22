@@ -5,7 +5,7 @@ const abbreviateNumbers = (value: number) => {
   }
   let finalValue = "";
   // thousands, millions, billions etc..
-  var s = ["", "K", "M", "B", "T", "Qa", "Qt", "Sx"];
+  var s = ["", "K", "M", "B", "T", "Qa"];
 
   // dividing the value by 3.
   var sNum = Math.floor(("" + value).length / 4);
