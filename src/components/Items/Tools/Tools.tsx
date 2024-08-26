@@ -16,13 +16,16 @@ function Tools() {
         return setRecipeData(toolRecipes[0].stickerseeker);
 
       case 1:
-        return setRecipeData(toolRecipes[1].tide);
+        return setRecipeData(toolRecipes[1].petal);
 
       case 2:
-        return setRecipeData(toolRecipes[2].scythe);
+        return setRecipeData(toolRecipes[2].tide);
 
       case 3:
-        return setRecipeData(toolRecipes[3].gummy);
+        return setRecipeData(toolRecipes[3].scythe);
+
+      case 4:
+        return setRecipeData(toolRecipes[4].gummy);
     }
   }, [toolSelection]);
 
