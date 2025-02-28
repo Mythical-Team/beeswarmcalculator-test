@@ -193,7 +193,7 @@ body::-webkit-scrollbar-thumb {
   cursor: pointer;
   content: "☰";
   padding: 2px 10px 5px 10px;
-  colour: var(--main-light-menu-button-trigram-colour);
+  color: var(--main-light-menu-button-trigram-colour);
   font-size: 1.1rem;
   font-weight: bold;
   border-radius: 5px;
