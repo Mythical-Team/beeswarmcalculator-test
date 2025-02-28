@@ -1,73 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <style>
-      .header {
-  height: 50px;
-  padding: 3px;
-  text-align: center;
-  background: #ffffff;
-  color: grey;
-  font-size: 10px;
-}
-    </style>
+<head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
     <title>Tools for BSS</title>
-  </head>
-  <body>
-    <div class="header"> 
-      <p><a href="https://beeswarmtools.netlify.app/">Home</a>&emsp;&emsp;&emsp;<a href="">Donate Me</a></p>
-      <be>
-      <strong>This website is mainly for testing purposes, before the official release in the main website</strong>
-    </div>
     
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f9;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .header {
+            height: 70px;
+            background-color: #ffffff;
+            color: #555;
+            font-size: 16px;
+            text-align: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .header a {
+            color: #007bff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .header a:hover {
+            color: #f8b400;
+            transform: scale(1.1);
+        }
+
+        .header strong {
+            display: block;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            border-top: 1px solid #444;
+            box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        footer p:first-of-type {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .social-icon {
+            margin: 0 10px;
+            padding: 6px;
+            background-color: #333;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            box-sizing: border-box;
+        }
+
+        .social-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .social-icon:hover {
+            background-color: #f8b400;
+            transform: scale(1.1);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <p>
+            <a href="https://beeswarmtools.netlify.app/">Home</a>
+            <a href="#">Donate Me</a>
+        </p>
+        <strong>This website is mainly for testing purposes, before the official release in the main website</strong>
+    </div>
+
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-    <!-- Social Medias-->
-    <footer style="background-color:black;">
-     <p style="color:white;"><br>&emsp;&ensp;Follow Me on My Social Media Platforms!</p>
-     <p>&emsp;<a href="https://www.youtube.com/channel/UCjJ7syWzx0YE4emU-xrvMLQ" target="_blank" class="social-icon">
-     <img src="https://www.youtube.com/favicon.ico" alt="YouTube" width="24" height="24"></a>&emsp;
-     <a href="https://www.roblox.com/users/2880937491/profile" target="_blank" class="social-icon">
-     <img src="https://ik.imagekit.io/lzrsmb/Roblox.png?updatedAt=1737527081877" alt="Roblox" width="24" height="24"></a>&emsp;
-     <a href="https://bee-swarm-simulator.fandom.com/wiki/User:MarioTheMythical" target="_blank" class="social-icon">
-     <img src="https://bee-swarm-simulator.fandom.com/favicon.ico" alt="Wiki Fandom" width="24" height="24"></a>&emsp;
-     <a href="https://www.reddit.com/user/ItsMarioTheMythical/" target="_blank" class="social-icon">
-     <img src="https://www.reddit.com/favicon.ico" alt="Reddit" width="24" height="24"></a>&emsp;
-     <a href="https://discord.gg/NQZ7uuwt4g" target="_blank" class="social-icon">
-     <img src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" alt="Discord" width="32" height="24"></a>&emsp;</p>
+    <footer>
+        <p>Follow Me on My Social Media Platforms!</p>
+        <div class="social-icons">
+            <a href="https://www.youtube.com/channel/UCjJ7syWzx0YE4emU-xrvMLQ" target="_blank" class="social-icon">
+                <img src="https://www.youtube.com/favicon.ico" alt="YouTube">
+            </a>
+            <a href="https://www.roblox.com/users/2880937491/profile" target="_blank" class="social-icon">
+                <img src="https://ik.imagekit.io/lzrsmb/Roblox.png?updatedAt=1737527081877" alt="Roblox">
+            </a>
+            <a href="https://bee-swarm-simulator.fandom.com/wiki/User:MarioTheMythical" target="_blank" class="social-icon">
+                <img src="https://bee-swarm-simulator.fandom.com/favicon.ico" alt="Wiki Fandom">
+            </a>
+            <a href="https://www.reddit.com/user/ItsMarioTheMythical/" target="_blank" class="social-icon">
+                <img src="https://www.reddit.com/favicon.ico" alt="Reddit">
+            </a>
+            <a href="https://discord.gg/NQZ7uuwt4g" target="_blank" class="social-icon">
+                <img src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" alt="Discord">
+            </a>
+        </div>
     </footer>
-  </body>
+</body>
 </html>
