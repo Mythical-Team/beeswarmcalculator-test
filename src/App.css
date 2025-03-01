@@ -194,21 +194,52 @@ body::-webkit-scrollbar-thumb {
 @keyframes fadein {
     from {
         opacity: 0;
-    }
+        }
     to {
         opacity: 1;
-    }
+        }
+}
+
+/* Header styles (Thinner border) */
+.header {
+    height: 60px;
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    font-size: 10px;
+    text-align: center;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header a {
+    color: var(--header-link-color);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.header a:hover {
+    color: #f8b400;
+    transform: scale(1.1);
 }
 
 /* MODIFIED STYLES
 these styles are modified so that the sun and moon
 is on the actual button, instead of a psuedo element
 */
-#theme-toggle::after {
+#theme-toggle {
      cursor: pointer;
      padding: 2px 5px 5px 5px;
      border-radius: 5px;
      transition: 100ms;
+     border: none; /* Remove the default button border */
+     background: none; /* Make the background transparent */
+     font-size: 1em; /* Adjust the font size as needed */
  }
 
 body:not(.dark-theme) #theme-toggle::after {
@@ -223,121 +254,121 @@ body.dark-theme #theme-toggle::after {
 }
 
 .light-menu::after {
-    cursor: pointer;
-    content: "☰";
-    padding: 2px 10px 5px 10px;
-    color: var(--main-background-color);
-    font-size: 1.1rem;
-    font-weight: bold;
-    border-radius: 5px;
-    background-color: var(--main-dark-font);
-    transition: 100ms;
+ cursor: pointer;
+ content: "☰";
+ padding: 2px 10px 5px 10px;
+ color: var(--main-background-color);
+ font-size: 1.1rem;
+ font-weight: bold;
+ border-radius: 5px;
+ background-color: var(--main-dark-font);
+ transition: 100ms;
 }
 
 .dark-menu::after {
-    cursor: pointer;
-    content: "☰";
-    padding: 2px 10px 5px 10px;
-    color: var(--main-background-color-dark);
-    font-size: 1.1rem;
-    font-weight: bold;
-    border-radius: 5px;
-    background-color: var(--main-background-color);
-    transition: 100ms;
+ cursor: pointer;
+ content: "☰";
+ padding: 2px 10px 5px 10px;
+ color: var(--main-background-color-dark);
+ font-size: 1.1rem;
+ font-weight: bold;
+ border-radius: 5px;
+ background-color: var(--main-background-color);
+ transition: 100ms;
 }
 
 .main-title::after {
-    content: "Tools for Bee Swarm Simulator";
+ content: "Tools for Bee Swarm Simulator";
 }
 
 .main-subtitle {
-    text-align: center;
-    padding: 0px 7px 7px 7px;
-    opacity: 0.7;
-    font-size: 0.9rem;
-    color: var(--main-dark-font);
+ text-align: center;
+ padding: 0px 7px 7px 7px;
+ opacity: 0.7;
+ font-size: 0.9rem;
+ color: var(--main-dark-font);
 }
 
 .main-items-container {
-    display: flex;
-    flex-direction: column;
-    padding: 10px 0px;
-    margin: 5px 0px 5px 0px;
+ display: flex;
+ flex-direction: column;
+ padding: 10px 0px;
+ margin: 5px 0px 5px 0px;
 }
 
 .main-description {
-    text-align: center;
-    margin: 5px 10px 20px 10px;
-    padding: 7px 7px 10px 7px;
-    border-radius: 5px;
-    color: var(--main-dark-font);
-    border: 2px solid rgb(27, 27, 27, 0.16);
-    background-color: var(--main-background-color);
+ text-align: center;
+ margin: 5px 10px 20px 10px;
+ padding: 7px 7px 10px 7px;
+ border-radius: 5px;
+ color: var(--main-dark-font);
+ border: 2px solid rgb(27, 27, 27, 0.16);
+ background-color: var(--main-background-color);
 }
 
 .main-tool-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+ display: flex;
+ justify-content: space-around;
+ flex-wrap: wrap;
 }
 
 .main-tool-selection {
-    margin: 10px;
+ margin: 10px;
 }
 
 .main-tool-title {
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1.1em;
-    transition: 200ms;
+ cursor: pointer;
+ border-radius: 5px;
+ font-size: 1.1em;
+ transition: 200ms;
 }
 
 .main-tool-selection:hover {
-    color: rgb(40, 140, 182);
+ color: rgb(40, 140, 182);
 }
 
 .main-tool-img {
-    cursor: pointer;
-    width: 350px;
-    margin-top: 15px;
-    border: 1px solid rgb(255, 255, 255, 0.5);
-    border-radius: 5px;
-    transition: 200ms;
+ cursor: pointer;
+ width: 350px;
+ margin-top: 15px;
+ border: 1px solid rgb(255, 255, 255, 0.5);
+ border-radius: 5px;
+ transition: 200ms;
 }
 
 .main-tool-img:hover {
-    transform: scale(1.03);
-    opacity: 1;
+ transform: scale(1.03);
+ opacity: 1;
 }
 
 
 /* ITEM SELECTION */
 
 .item-select-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 10px 0px 10px 0px;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+padding: 10px 0px 10px 0px;
 }
 
 .item-select-text {
-  text-align: center;
-  cursor: pointer;
-  margin: 5px 5px 5px 5px;
-  padding: 5px 5px 7px 5px;
-  border-radius: 5px;
-  min-width: 80px;
-  border: 1px solid rgb(33, 81, 127, 0.2);
-  background-color: var(--main-button);
-  transition: 100ms;
+text-align: center;
+cursor: pointer;
+margin: 5px 5px 5px 5px;
+padding: 5px 5px 7px 5px;
+border-radius: 5px;
+min-width: 80px;
+border: 1px solid rgb(33, 81, 127, 0.2);
+background-color: var(--main-button);
+transition: 100ms;
 }
 
 .item-select-text:hover {
-  background-color: var(--main-button-hover);
+background-color: var(--main-button-hover);
 }
 
 .item-select-text:active {
-  background-color: rgb(27, 61, 93);
+background-color: rgb(27, 61, 93);
 }
 
 /* ITEM DISPLAY */
