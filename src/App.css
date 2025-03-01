@@ -9,6 +9,14 @@
   --main-button-selected-hover: ;
   --main-background-color-dark: rgb(40, 40, 40);
   --main-lighter-background-color-dark: rgb(25, 25, 25);
+  /* Light Theme */
+  --header-bg-color: #ffffff; /* Light background */
+  --header-text-color: #555;    /* Dark text */
+  --header-link-color: #007bff; /* Blue links */
+  
+  /* Other light theme variables */
+  --body-bg-color: #f4f6f9;
+  --body-text-color: #444;
 }
 
 html {
@@ -170,22 +178,17 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-.light::after {
-  cursor: pointer;
-  content: "🌙";
-  padding: 2px 5px 5px 5px;
-  border-radius: 5px;
-  background-color: var(--main-dark-font);
-  transition: 100ms;
+.header a {
+  color: var(--header-link-color); /* Use the variable! */
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.dark::after {
-  cursor: pointer;
-  content: "☀️";
-  padding: 2px 5px 5px 5px;
-  border-radius: 5px;
-  background-color: var(--main-background-color);
-  transition: 100ms;
+.header a:hover {
+  color: #f8b400; /* You can also create a variable for this hover color if you want */
+  transform: scale(1.1);
 }
 
 .light-menu::after {
