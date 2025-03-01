@@ -1,14 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Web site created using create-react-app" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+<html lang="en" class="light"> <head>
     <title>BSS Tools (Developer Mode)</title>
+    
+    <style>
+        /* ... your existing CSS styles ... */
+    </style>
 </head>
 <body>
     <div class="header">
@@ -17,55 +13,10 @@
             <a href="https://www.roblox.com/games/15303115945/a#!/store" target="_blank">Donate Me</a>
             <a href="https://beeswarmtools.netlify.app/">Normal Mode</a>
         </p>
-        <button class="theme-toggle">Toggle Theme</button> 
-        <strong>This website is mainly for testing purposes, before the official release on the main website</strong>
+        <strong>This website is mainly for testing purposes, before the official release in the main website</strong>
     </div>
 
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-
     <footer>
-        <p>Follow Me on My Social Media Platforms!</p>
-        <p>Connect with me on YouTube, Reddit, Discord, and more!</p>
-        <div class="social-icons">
-            <a href="https://www.youtube.com/channel/UCjJ7syWzx0YE4emU-xrvMLQ" target="_blank" class="social-icon">
-                <img src="https://www.youtube.com/favicon.ico" alt="YouTube">
-            </a>
-            <a href="https://www.roblox.com/users/2880937491/profile" target="_blank" class="social-icon">
-                <img src="https://ik.imagekit.io/lzrsmb/Roblox.png?updatedAt=1737527081877" alt="Roblox">
-            </a>
-            <a href="https://bee-swarm-simulator.fandom.com/wiki/User:MarioTheMythical" target="_blank" class="social-icon">
-                <img src="https://bee-swarm-simulator.fandom.com/favicon.ico" alt="Wiki Fandom">
-            </a>
-            <a href="https://www.reddit.com/user/ItsMarioTheMythical/" target="_blank" class="social-icon">
-                <img src="https://www.reddit.com/favicon.ico" alt="Reddit">
-            </a>
-            <a href="https://discord.gg/NQZ7uuwt4g" target="_blank" class="social-icon">
-                <img src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" alt="Discord">
-            </a>
-        </div>
-    </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const themeToggle = document.querySelector(".theme-toggle"); 
-            const body = document.body;
-
-            // Check for saved theme in localStorage
-            const savedTheme = localStorage.getItem("theme") || "light";
-            body.classList.add(savedTheme + "-theme");
-
-            // Toggle theme on button click
-            themeToggle.addEventListener("click", function () {
-                if (body.classList.contains("light-theme")) {
-                    body.classList.replace("light-theme", "dark-theme");
-                    localStorage.setItem("theme", "dark");
-                } else {
-                    body.classList.replace("dark-theme", "light-theme");
-                    localStorage.setItem("theme", "light");
-                }
-            });
-        });
-    </script>
+        </footer>
 </body>
 </html>
