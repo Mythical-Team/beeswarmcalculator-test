@@ -1,4 +1,12 @@
 :root {
+  /* Light Theme */
+  --header-bg-color: #ffffff;
+  --header-text-color: #555;
+  --header-link-color: #007bff;
+  --body-bg-color: #f4f6f9;
+  --body-text-color: #444;
+
+  /* Global styles */
   --main-background-color: rgb(240, 240, 240);
   --main-darker-background-color: rgb(216, 216, 216);
   --main-dark-font: rgb(20, 20, 20);
@@ -9,19 +17,33 @@
   --main-button-selected-hover: ;
   --main-background-color-dark: rgb(40, 40, 40);
   --main-lighter-background-color-dark: rgb(25, 25, 25);
-  /* Light Theme */
-  --header-bg-color: #ffffff; /* Light background */
-  --header-text-color: #555;    /* Dark text */
-  --header-link-color: #007bff; /* Blue links */
-  
-  /* Other light theme variables */
-  --body-bg-color: #f4f6f9;
-  --body-text-color: #444;
+}
+
+body.dark-theme {
+  /* Dark Theme */
+  --header-bg-color: #222;
+  --header-text-color: #eee;
+  --header-link-color: #f8b400;
+  --body-bg-color: #333;
+  --body-text-color: #eee;
+
+  /* Your existing dark theme variable overrides */
+  --main-background-color: rgb(40, 40, 40);
+  --main-dark-font: rgb(240, 240, 240);
 }
 
 html {
   background-color: rgb(29, 54, 62);
   color: white;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--body-bg-color);
+  color: var(--body-text-color);
+  line-height: 1.6;
 }
 
 a:link {
@@ -63,25 +85,6 @@ body::-webkit-scrollbar-thumb {
   background-color: rgb(141, 141, 141);
 }
 
-
-/*  IMPORTANT: DELETE THESE LINES */
-.light::after {
-    cursor: pointer;
-    content: "🌙";
-    padding: 2px 5px 5px 5px;
-    border-radius: 5px;
-    background-color: var(--main-dark-font);
-    transition: 100ms;
-}
-
-.dark::after {
-    cursor: pointer;
-    content: "☀️";
-    padding: 2px 5px 5px 5px;
-    border-radius: 5px;
-    background-color: var(--main-background-color);
-    transition: 100ms;
-}
 /* MAIN */
 
 .main-parent-container {
@@ -197,17 +200,22 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-.header a {
-  color: var(--header-link-color); /* Use the variable! */
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: 600;
-  transition: color 0.3s ease, transform 0.3s ease;
+.light::after {
+  cursor: pointer;
+  content: "🌙";
+  padding: 2px 5px 5px 5px;
+  border-radius: 5px;
+  background-color: var(--main-dark-font);
+  transition: 100ms;
 }
 
-.header a:hover {
-  color: #f8b400; /* You can also create a variable for this hover color if you want */
-  transform: scale(1.1);
+.dark::after {
+  cursor: pointer;
+  content: "☀️";
+  padding: 2px 5px 5px 5px;
+  border-radius: 5px;
+  background-color: var(--main-background-color);
+  transition: 100ms;
 }
 
 .light-menu::after {
