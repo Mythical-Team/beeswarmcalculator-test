@@ -57,6 +57,15 @@ body::-webkit-scrollbar-thumb {
 
 /* MAIN */
 
+.light-header {
+  background-color: var(--main-background-color);
+}
+
+.dark-header {
+  background-color: var(--main-background-color-dark);
+}
+  
+
 .main-parent-container {
   display: flex;
   justify-content: center;
