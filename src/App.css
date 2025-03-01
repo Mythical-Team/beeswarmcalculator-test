@@ -1,159 +1,53 @@
 :root {
-  --main-background-color: rgb(240, 240, 240);
-  --main-dark-font: rgb(20, 20, 20);
-  --main-button: rgb(97, 163, 225);
-  --main-button-hover: rgb(62, 123, 180);
-  --main-background-color-dark: rgb(40, 40, 40);
-  --main-dark-text: white;
+    --main-background-color: rgb(240, 240, 240);
+    --main-darker-background-color: rgb(216, 216, 216);
+    --main-dark-font: rgb(20, 20, 20);
+    --main-button: rgb(97, 163, 225);
+    --main-button-hover: rgb(62, 123, 180);
+    --main-button-active: rgb(35, 79, 121);
+    --main-button-selected: ;
+    --main-button-selected-hover: ;
+    --main-background-color-dark: rgb(40, 40, 40);
+    --main-lighter-background-color-dark: rgb(25, 25, 25);
+    --header-bg: #ffffff;
+    --header-text: #555;
+}
+
+.dark {
+    --main-background-color: rgb(40, 40, 40);
+    --main-darker-background-color: rgb(25, 25, 25);
+    --main-dark-font: rgb(220, 220, 220);
+    --header-bg: #333;
+    --header-text: #eee;
 }
 
 html {
-  transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: var(--main-background-color);
+    color: var(--main-dark-font);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Light Theme */
-.light-theme {
-  background-color: var(--main-background-color);
-  color: var(--main-dark-font);
+.dark html {
+    background-color: var(--main-background-color-dark);
 }
 
-.light-theme .header {
-  background-color: #ffffff;
-  color: #555;
-  border-bottom: 1px solid #ddd;
+body {
+    background-color: var(--main-background-color);
+    color: var(--main-dark-font);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.light-theme .theme-toggle {
-  background-color: var(--main-button);
-  color: white;
-}
-
-/* Dark Theme */
-.dark-theme {
-  background-color: var(--main-background-color-dark);
-  color: var(--main-dark-text);
-}
-
-.dark-theme .header {
-  background-color: #222;
-  color: white;
-  border-bottom: 1px solid #444;
-}
-
-.dark-theme .theme-toggle {
-  background-color: var(--main-button-hover);
-  color: white;
-}
-
-/* Header */
 .header {
-  height: 60px;
-  text-align: center;
-  padding: 12px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .header a {
-  color: inherit;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: 600;
-  transition: color 0.3s ease, transform 0.3s ease;
+    color: var(--header-text);
 }
 
-.header a:hover {
-  color: #f8b400;
-  transform: scale(1.1);
-}
-
-/* Theme Toggle Button */
-.theme-toggle {
-  cursor: pointer;
-  padding: 5px 10px;
-  margin: 10px;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 5px;
-  border: none;
-  transition: background-color 0.2s, transform 0.2s;
-}
-
-.theme-toggle:hover {
-  transform: scale(1.05);
-}
-
-/* Footer */
-footer {
-  background-color: #222;
-  color: white;
-  padding: 15px 0;
-  text-align: center;
-  border-top: 1px solid #444;
-}
-
-/* Social Icons */
-.social-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.social-icon {
-  margin: 0 10px;
-  padding: 6px;
-  background-color: #333;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-  width: 45px;
-  height: 45px;
-  box-sizing: border-box;
-}
-
-.social-icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.social-icon:hover {
-  background-color: #f8b400;
-  transform: scale(1.1);
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .header {
-    font-size: 14px;
-    height: 50px;
-    padding: 10px;
-  }
-
-  .theme-toggle {
-    font-size: 0.9rem;
-  }
-
-  .social-icon {
-    width: 40px;
-    height: 40px;
-  }
-}
-
-@media (max-width: 480px) {
-  .header {
-    height: 45px;
-    padding: 8px;
-  }
-
-  .theme-toggle {
-    font-size: 0.8rem;
-  }
-
-  .social-icon {
-    width: 35px;
-    height: 35px;
-  }
-}
-/* ITEM DISPLAY */
+/* ... rest of your CSS ... *//* ITEM DISPLAY */
 
 .display-container {
   width: 100%;
