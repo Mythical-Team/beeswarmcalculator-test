@@ -50,6 +50,7 @@ body {
     background-color: var(--body-bg-color);
     color: var(--body-text-color);
     line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
 
 a:link {
@@ -91,121 +92,6 @@ body::-webkit-scrollbar-thumb {
     background-color: rgb(141, 141, 141);
 }
 
-/* MAIN */
-
-.main-parent-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-}
-
-.main-container {
-    width: 40vw;
-    min-height: 100vh;
-    background-color: var(--main-background-color);
-}
-
-.main-title-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.main-title {
-    text-align: center;
-    font-size: 1.4em;
-    padding: 10px 0px 10px 0px;
-    color: var(--main-dark-font);
-    width: 85%;
-}
-
-.dropdown-menu-close {
-    display: flex;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    top: 5px;
-    right: 20px;
-    font-size: 1.7rem;
-    font-weight: 800;
-    color: var(--main-dark-font);
-    z-index: 16;
-}
-
-.hidden {
-    display: none;
-}
-
-.dropdown-menu {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    background-color: var(--main-background-color);
-    color: var(--main-dark-font);
-    font-size: 1.1rem;
-    font-weight: 500;
-    width: 40%;
-    height: 0%;
-    z-index: 15;
-    transition: 300ms;
-}
-
-.dropdown-menu-blur {
-    cursor: pointer;
-    position: fixed;
-    width: 40%;
-    height: 100%;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(1px);
-    background-color: rgba(20, 20, 20, 0.4);
-    z-index: 14;
-    transition: 100ms;
-}
-
-.visible {
-    height: 210px;
-    transition: 200ms;
-}
-
-.visible > :nth-child(1),
-.visible > :nth-child(2),
-.visible > :nth-child(3),
-.visible > :nth-child(4) {
-    padding: 15px 10px 0px 15px;
-}
-
-.visible > :nth-child(1)::after {
-    content: "Home";
-    animation: fadein 300ms;
-}
-
-.visible > :nth-child(2)::after {
-    content: "Hive Planner";
-    animation: fadein 300ms;
-}
-
-.visible > :nth-child(3)::after {
-    content: "Recipe Calculator";
-    animation: fadein 300ms;
-}
-
-.visible > :nth-child(4)::after {
-    content: "Bond Calculator";
-    animation: fadein 300ms;
-}
-
-@keyframes fadein {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 /* Header styles (Thinner border) */
 .header {
     height: 60px;
@@ -216,6 +102,7 @@ body::-webkit-scrollbar-thumb {
     padding: 12px;
     border-bottom: 1px solid #ddd;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -234,6 +121,31 @@ body::-webkit-scrollbar-thumb {
     transform: scale(1.1);
 }
 
+/* MODIFIED STYLES
+these styles are modified so that the sun and moon
+is on the actual button, instead of a psuedo element
+*/
+#theme-toggle {
+    cursor: pointer;
+    padding: 2px 5px 5px 5px;
+    border-radius: 5px;
+    transition: 100ms;
+    border: none; /* Remove the default button border */
+    background: none; /* Make the background transparent */
+    font-size: 1em; /* Adjust the font size as needed */
+}
+
+body:not(.dark-theme) #theme-toggle::after {
+    content: "☀️";
+    background-color: var(--main-background-color);
+}
+
+body.dark-theme #theme-toggle::after {
+    content: "🌙";
+    background-color: var(--main-dark-font);
+}
+
+/* Footer styles (Thinner border) */
 footer {
     background-color: var(--footer-bg-color);
     color: var(--footer-text-color);
@@ -289,28 +201,42 @@ footer p {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* MODIFIED STYLES
-these styles are modified so that the sun and moon
-is on the actual button, instead of a psuedo element
-*/
-#theme-toggle {
-    cursor: pointer;
-    padding: 2px 5px 5px 5px;
-    border-radius: 5px;
-    transition: 100ms;
-    border: none; /* Remove the default button border */
-    background: none; /* Make the background transparent */
-    font-size: 1em; /* Adjust the font size as needed */
+/* Responsive styles */
+@media (max-width: 768px) {
+    .header {
+        font-size: 14px;
+        height: 50px;
+        padding: 10px;
+    }
+
+    footer p:first-of-type {
+        font-size: 16px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
 }
 
-body:not(.dark-theme) #theme-toggle::after {
-    content: "☀️";
-    background-color: var(--main-background-color);
-}
+@media (max-width: 480px) {
+    .header {
+        height: 45px;
+        padding: 8px;
+    }
 
-body.dark-theme #theme-toggle::after {
-    content: "🌙";
-    background-color: var(--main-dark-font);
+    footer p:first-of-type {
+        font-size: 15px;
+    }
+
+    .social-icon {
+        width: 35px;
+        height: 35px;
+    }
 }
 
 .light-menu::after {
@@ -401,6 +327,35 @@ body.dark-theme #theme-toggle::after {
     opacity: 1;
 }
 
+
+/* ITEM SELECTION */
+
+.item-select-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0px 10px 0px;
+}
+
+.item-select-text {
+    text-align: center;
+    cursor: pointer;
+    margin: 5px 5px 5px 5px;
+    padding: 5px 5px 7px 5px;
+    border-radius: 5px;
+    min-width: 80px;
+    border: 1px solid rgb(33, 81, 127, 0.2);
+    background-color: var(--main-button);
+    transition: 100ms;
+}
+
+.item-select-text:hover {
+    background-color: var(--main-button-hover);
+}
+
+.item-select-text:active {
+    background-color: rgb(27, 61, 93);
+}
 
 /* ITEM SELECTION */
 
