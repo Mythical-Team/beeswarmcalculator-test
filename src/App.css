@@ -1,54 +1,445 @@
 :root {
+    /* Light Theme */
+    --header-bg-color: #ffffff;
+    --header-text-color: #555;
+    --header-link-color: #007bff;
+    --body-bg-color: #f4f6f9;
+    --body-text-color: #444;
+    --footer-bg-color: #222;
+    --footer-text-color: white;
+    --footer-border-color: #444;
+
+    /* Global styles */
     --main-background-color: rgb(240, 240, 240);
     --main-darker-background-color: rgb(216, 216, 216);
     --main-dark-font: rgb(20, 20, 20);
     --main-button: rgb(97, 163, 225);
     --main-button-hover: rgb(62, 123, 180);
     --main-button-active: rgb(35, 79, 121);
-    --main-button-selected: ;
-    --main-button-selected-hover: ;
     --main-background-color-dark: rgb(40, 40, 40);
     --main-lighter-background-color-dark: rgb(25, 25, 25);
-    --header-bg: #ffffff;
-    --header-text: #555;
 }
 
-.dark {
+body.dark-theme {
+    /* Dark Theme */
+    --header-bg-color: #222;
+    --header-text-color: white;
+    --header-link-color: #f8b400;
+    --body-bg-color: #333;
+    --body-text-color: #eee;
+    --footer-bg-color: #111;
+    --footer-text-color: #ddd;
+    --footer-border-color: #666;
+
+    /* Rest of your dark theme variables */
     --main-background-color: rgb(40, 40, 40);
     --main-darker-background-color: rgb(25, 25, 25);
-    --main-dark-font: rgb(220, 220, 220);
-    --header-bg: #333;
-    --header-text: #eee;
+    --main-dark-font: rgb(240, 240, 240);
+    --main-button: rgb(141, 141, 141);
+    --main-button-hover: rgb(190, 190, 190);
+    --main-button-active: rgb(216, 216, 216);
+    --main-background-color-dark: rgb(240, 240, 240);
+    --main-lighter-background-color-dark: rgb(216, 216, 216);
 }
 
 html {
+    background-color: rgb(29, 54, 62);
+    color: white;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* SCROLLBAR */
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgb(40, 40, 40);
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    border: 3px solid rgb(64, 64, 64);
+    background-color: rgb(141, 141, 141);
+}
+
+/* MAIN */
+
+.main-parent-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.main-container {
+    width: 40vw;
+    min-height: 100vh;
+    background-color: var(--main-background-color);
+}
+
+.main-title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 1.4em;
+    padding: 10px 0px 10px 0px;
+    color: var(--main-dark-font);
+    width: 85%;
+}
+
+.dropdown-menu-close {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    top: 5px;
+    right: 20px;
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: var(--main-dark-font);
+    z-index: 16;
+}
+
+.hidden {
+    display: none;
+}
+
+.dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
     background-color: var(--main-background-color);
     color: var(--main-dark-font);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1.1rem;
+    font-weight: 500;
+    width: 40%;
+    height: 0%;
+    z-index: 15;
+    transition: 300ms;
 }
 
-.dark html {
-    background-color: var(--main-background-color-dark);
+.dropdown-menu-blur {
+    cursor: pointer;
+    position: fixed;
+    width: 40%;
+    height: 100%;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(1px);
+    background-color: rgba(20, 20, 20, 0.4);
+    z-index: 14;
+    transition: 100ms;
 }
 
+.visible {
+    height: 210px;
+    transition: 200ms;
+}
+
+.visible > :nth-child(1),
+.visible > :nth-child(2),
+.visible > :nth-child(3),
+.visible > :nth-child(4) {
+    padding: 15px 10px 0px 15px;
+}
+
+.visible > :nth-child(1)::after {
+    content: "Home";
+    animation: fadein 300ms;
+}
+
+.visible > :nth-child(2)::after {
+    content: "Hive Planner";
+    animation: fadein 300ms;
+}
+
+.visible > :nth-child(3)::after {
+    content: "Recipe Calculator";
+    animation: fadein 300ms;
+}
+
+.visible > :nth-child(4)::after {
+    content: "Bond Calculator";
+    animation: fadein 300ms;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.light::after {
+    cursor: pointer;
+    content: "🌙";
+    padding: 2px 5px 5px 5px;
+    border-radius: 5px;
+    background-color: var(--main-dark-font);
+    transition: 100ms;
+}
+
+.dark::after {
+    cursor: pointer;
+    content: "☀️";
+    padding: 2px 5px 5px 5px;
+    border-radius: 5px;
+    background-color: var(--main-background-color);
+    transition: 100ms;
+}
+
+.light-menu::after {
+    cursor: pointer;
+    content: "☰";
+    padding: 2px 10px 5px 10px;
+    color: var(--main-background-color);
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: var(--main-dark-font);
+    transition: 100ms;
+}
+
+.dark-menu::after {
+    cursor: pointer;
+    content: "☰";
+    padding: 2px 10px 5px 10px;
+    color: var(--main-background-color-dark);
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: var(--main-background-color);
+    transition: 100ms;
+}
+
+.main-title::after {
+    content: "Tools for Bee Swarm Simulator";
+}
+
+.main-subtitle {
+    text-align: center;
+    padding: 0px 7px 7px 7px;
+    opacity: 0.7;
+    font-size: 0.9rem;
+    color: var(--main-dark-font);
+}
+
+.main-items-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+    margin: 5px 0px 5px 0px;
+}
+
+.main-description {
+    text-align: center;
+    margin: 5px 10px 20px 10px;
+    padding: 7px 7px 10px 7px;
+    border-radius: 5px;
+    color: var(--main-dark-font);
+    border: 2px solid rgb(27, 27, 27, 0.16);
+    background-color: var(--main-background-color);
+}
+
+.main-tool-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.main-tool-selection {
+    margin: 10px;
+}
+
+.main-tool-title {
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: 200ms;
+}
+
+.main-tool-selection:hover {
+    color: rgb(40, 140, 182);
+}
+
+.main-tool-img {
+    cursor: pointer;
+    width: 350px;
+    margin-top: 15px;
+    border: 1px solid rgb(255, 255, 255, 0.5);
+    border-radius: 5px;
+    transition: 200ms;
+}
+
+.main-tool-img:hover {
+    transform: scale(1.03);
+    opacity: 1;
+}
+
+/* Global styles */
 body {
-    background-color: var(--main-background-color);
-    color: var(--main-dark-font);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--body-bg-color);
+    color: var(--body-text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
 
+/* Header styles (Thinner border) */
 .header {
-    background-color: var(--header-bg);
-    color: var(--header-text);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    height: 60px;
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    font-size: 10px;
+    text-align: center;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .header a {
-    color: var(--header-text);
+    color: var(--header-link-color);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* ... rest of your CSS ... *//* ITEM DISPLAY */
+.header a:hover {
+    color: #f8b400;
+    transform: scale(1.1);
+}
 
+/* Footer styles (Thinner border) */
+footer {
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+    padding: 15px 0;
+    text-align: center;
+    border-top: 1px solid var(--footer-border-color);
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Smooth transition */
+}
+
+/* Make the main footer message slightly bigger */
+footer p:first-of-type {
+    font-size: 18px; /* Increased size */
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+footer p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Social icon container */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Social icon styles */
+.social-icon {
+    margin: 0 10px;
+    padding: 6px;
+    background-color: #333;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    box-sizing: border-box;
+}
+
+.social-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.social-icon:hover {
+    background-color: #f8b400;
+    transform: scale(1.1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .header {
+        font-size: 14px;
+        height: 50px;
+        padding: 10px;
+    }
+
+    footer p:first-of-type {
+        font-size: 16px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        height: 45px;
+        padding: 8px;
+    }
+
+    footer p:first-of-type {
+        font-size: 15px;
+    }
+
+    .social-icon {
+        width: 35px;
+        height: 35px;
+    }
+}
 .display-container {
   width: 100%;
   padding: 10px 0px 5px 0px;
