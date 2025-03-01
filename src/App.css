@@ -55,16 +55,7 @@ body::-webkit-scrollbar-thumb {
   background-color: rgb(141, 141, 141);
 }
 
-/* MAIN */
-
-.light-header {
-  background-color: var(--main-background-color);
-}
-
-.dark-header {
-  background-color: var(--main-background-color-dark);
-}
-  
+/* MAIN */  
 
 .main-parent-container {
   display: flex;
@@ -220,6 +211,15 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--main-background-color);
   transition: 100ms;
 }
+
+.light-header::after {
+  background-color: var(--main-background-color);
+}
+
+.dark-header::after {
+  background-color: var(--main-background-color-dark);
+}
+
 
 .main-title::after {
   content: "Tools for Bee Swarm Simulator";
