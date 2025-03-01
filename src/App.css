@@ -102,10 +102,14 @@ body::-webkit-scrollbar-thumb {
     padding: 12px;
     border-bottom: 1px solid #ddd;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+.header-content {
+    width: 80%;
+    text-align: center; /* Center the content */
 }
 
 .header a {
@@ -133,6 +137,9 @@ is on the actual button, instead of a psuedo element
     border: none; /* Remove the default button border */
     background: none; /* Make the background transparent */
     font-size: 1em; /* Adjust the font size as needed */
+    position: absolute;
+    right: 10px; /* Position it to the right */
+    top: 10px;
 }
 
 body:not(.dark-theme) #theme-toggle::after {
@@ -325,6 +332,36 @@ footer p {
 .main-tool-img:hover {
     transform: scale(1.03);
     opacity: 1;
+}
+
+
+/* ITEM SELECTION */
+
+.item-select-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0px 10px 0px;
+}
+
+.item-select-text {
+    text-align: center;
+    cursor: pointer;
+    margin: 5px 5px 5px 5px;
+    padding: 5px 5px 7px 5px;
+    border-radius: 5px;
+    min-width: 80px;
+    border: 1px solid rgb(33, 81, 127, 0.2);
+    background-color: var(--main-button);
+    transition: 100ms;
+}
+
+.item-select-text:hover {
+    background-color: var(--main-button-hover);
+}
+
+.item-select-text:active {
+    background-color: rgb(27, 61, 93);
 }
 
 
