@@ -62,6 +62,7 @@
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme) {
             body.classList.add(savedTheme);
+            updateButtonText();
         }
 
         themeToggle.addEventListener('click', () => {
@@ -73,7 +74,19 @@
             } else {
                 localStorage.setItem('theme', ''); // Remove to use default
             }
+
+            updateButtonText();
         });
+
+        function updateButtonText() {
+            if (body.classList.contains('dark-theme')) {
+                themeToggle.textContent = '🌙';
+            } else {
+                themeToggle.textContent = '☀️';
+            }
+        }
+
+        updateButtonText(); // Initial update
     </script>
 </body>
 
