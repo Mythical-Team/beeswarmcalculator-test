@@ -63,6 +63,25 @@ body::-webkit-scrollbar-thumb {
   background-color: rgb(141, 141, 141);
 }
 
+
+/*  IMPORTANT: DELETE THESE LINES */
+.light::after {
+    cursor: pointer;
+    content: "🌙";
+    padding: 2px 5px 5px 5px;
+    border-radius: 5px;
+    background-color: var(--main-dark-font);
+    transition: 100ms;
+}
+
+.dark::after {
+    cursor: pointer;
+    content: "☀️";
+    padding: 2px 5px 5px 5px;
+    border-radius: 5px;
+    background-color: var(--main-background-color);
+    transition: 100ms;
+}
 /* MAIN */
 
 .main-parent-container {
