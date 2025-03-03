@@ -55,7 +55,7 @@ body::-webkit-scrollbar-thumb {
   background-color: rgb(141, 141, 141);
 }
 
-/* MAIN */  
+/* MAIN */
 
 .main-parent-container {
   display: flex;
@@ -211,44 +211,6 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--main-background-color);
   transition: 100ms;
 }
-
-.header.dark-mode::after {
-    cursor: pointer;
-    content: "☀️";
-    padding: 2px 5px 5px 5px;
-    border-radius: 5px;
-    background-color: var(--main-background-color);
-    transition: 100ms;
-}
-
-.header::after {
-    cursor: pointer;
-    content: "🌙";
-    padding: 2px 5px 5px 5px;
-    border-radius: 5px;
-    background-color: var(--main-dark-font);
-    transition: 100ms;
-}
-
-/* ... (your existing CSS) ... */
-
-.header {
-    height: 60px;
-    background-color: #ffffff; /* Initial background color */
-    color: #555; /* Initial text color */
-    /* ... other styles ... */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition */
-}
-
-
-
-.dark-header { /* Dark mode styles for header */
-    background-color: #222; /* Dark background */
-    color: white; /* Light text */
-}
-
-
-/* ... rest of your CSS ... */
 
 .main-title::after {
   content: "Tools for Bee Swarm Simulator";
