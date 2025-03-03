@@ -212,14 +212,23 @@ body::-webkit-scrollbar-thumb {
   transition: 100ms;
 }
 
-.light-header::after {
-  background-color: var(--main-background-color);
+.header.dark-mode::after {
+    cursor: pointer;
+    content: "☀️";
+    padding: 2px 5px 5px 5px;
+    border-radius: 5px;
+    background-color: var(--main-background-color);
+    transition: 100ms;
 }
 
-.dark-header::after {
-  background-color: var(--main-background-color-dark);
+.header::after {
+    cursor: pointer;
+    content: "🌙";
+    padding: 2px 5px 5px 5px;
+    border-radius: 5px;
+    background-color: var(--main-dark-font);
+    transition: 100ms;
 }
-
 
 .main-title::after {
   content: "Tools for Bee Swarm Simulator";
