@@ -41,20 +41,24 @@
     </footer>
 
 
-    <script>
-        // JavaScript to toggle dark mode (you'll need to adapt this to your specific setup)
-        const body = document.body;
-        const header = document.querySelector('.header');
-        const darkModeToggle = document.createElement('button'); // Create a button or get existing one
-        darkModeToggle.textContent = 'Toggle Dark Mode';
-        header.appendChild(darkModeToggle);
+<script>
+    // JavaScript to toggle dark mode using the existing .dark button
+    const body = document.body;
+    const header = document.querySelector('.header');
+    const darkModeToggle = document.querySelector('.dark'); // Select the existing button
 
 
+    if (darkModeToggle) { // Check if the element exists
         darkModeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark'); // Toggle the 'dark' class on the body
-            header.classList.toggle('dark'); // and on the header
-        });
+            body.classList.toggle('dark');
+            header.classList.toggle('dark'); 
 
-    </script>
+            // Toggle the 'light' class on the button itself (for styling purposes - optional)
+            darkModeToggle.classList.toggle('light');  
+        });
+    } else {
+        console.error("Dark mode toggle button not found!"); // Log an error if the button isn't present
+    }
+</script>
 </body>
 </html>
