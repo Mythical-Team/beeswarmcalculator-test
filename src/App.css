@@ -230,6 +230,26 @@ body::-webkit-scrollbar-thumb {
     transition: 100ms;
 }
 
+/* ... (your existing CSS) ... */
+
+.header {
+    height: 60px;
+    background-color: #ffffff; /* Initial background color */
+    color: #555; /* Initial text color */
+    /* ... other styles ... */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition */
+}
+
+
+
+.dark-header { /* Dark mode styles for header */
+    background-color: #222; /* Dark background */
+    color: white; /* Light text */
+}
+
+
+/* ... rest of your CSS ... */
+
 .main-title::after {
   content: "Tools for Bee Swarm Simulator";
 }
