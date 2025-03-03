@@ -185,10 +185,9 @@
 <body>
     <div class="header" id="header">
         <p>
-            <a href="https://test-beeswarmtools.netlify.app/">Home</a>
+            <a href="https://test-beeswarmtools.netlify.app/" onclick="toggleTheme(); return false;">Home</a>
             <a href="https://www.roblox.com/games/15303115945/a#!/store" target="_blank">Donate Me</a>
             <a href="https://beeswarmtools.netlify.app/">Normal Mode</a>
-            <a href="#" id="theme-switcher">Toggle Theme</a>
         </p>
         <strong>This website is mainly for testing purposes, before the official release in the main website</strong>
 
@@ -223,16 +222,12 @@
     </footer>
 
     <script>
-        const themeSwitcher = document.getElementById('theme-switcher');
         const header = document.getElementById('header');
         const body = document.body;
         const footer = document.getElementById('footer');
         const socialIcons = document.querySelectorAll('.social-icon');
 
-
-        themeSwitcher.addEventListener('click', (event) => {
-            event.preventDefault(); // Prevent the link from navigating
-
+        function toggleTheme() {
             body.classList.toggle('dark-mode');
             header.classList.toggle('dark-mode');
             footer.classList.toggle('dark-mode');
@@ -240,7 +235,7 @@
             socialIcons.forEach(icon => {
                 icon.classList.toggle('dark-mode');
             });
-        });
+        }
     </script>
 </body>
 
