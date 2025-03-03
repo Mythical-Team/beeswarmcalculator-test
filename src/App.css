@@ -85,6 +85,62 @@ body::-webkit-scrollbar-thumb {
   width: 85%;
 }
 
+/* Header styles */
+.header {
+    height: 60px;
+    background-color: var(--main-background-color); /* rgb(240, 240, 240) */
+    color: var(--main-dark-font); /* rgb(20, 20, 20) */
+    font-size: 10px;
+    text-align: center;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header a {
+    color: var(--main-button); /* rgb(97, 163, 225) */
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.header a:hover {
+    color: var(--main-button-hover); /* rgb(62, 123, 180) */
+    transform: scale(1.1);
+}
+
+/* Dark Mode Header Styles */
+.dark .header {
+    background-color: var(--main-background-color-dark); /* rgb(40, 40, 40) */
+    color: white;
+}
+
+.dark .header a {
+  color: var(--main-button);  /* rgb(97, 163, 225) -  You might want a different color here for better contrast in dark mode */
+}
+
+.dark .header a:hover {
+  color: var(--main-button-hover); /* rgb(62, 123, 180) - You might want a different color here for better contrast in dark mode */
+}
+
+/* Media Queries (For responsiveness - adjust as needed) */
+@media (max-width: 768px) {
+    .header {
+        font-size: 14px;
+        height: 50px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        height: 45px;
+        padding: 8px;
+    }
+}
+
 .dropdown-menu-close {
   display: flex;
   position: absolute;
