@@ -173,6 +173,7 @@ body::-webkit-scrollbar-thumb {
 .light::after {
   cursor: pointer;
   content: "🌙";
+  color: white;
   padding: 2px 5px 5px 5px;
   border-radius: 5px;
   background-color: var(--main-dark-font);
@@ -182,6 +183,7 @@ body::-webkit-scrollbar-thumb {
 .dark::after {
   cursor: pointer;
   content: "☀️";
+  color: white;
   padding: 2px 5px 5px 5px;
   border-radius: 5px;
   background-color: var(--main-background-color);
