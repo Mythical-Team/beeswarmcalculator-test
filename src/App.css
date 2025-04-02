@@ -170,37 +170,6 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-.header-parent {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  padding: 10px;
-}
-
-.header-links {
-  display: flex;
-  justify-content: space-around;
-  width: 60%;
-}
-
-.header-message {
-  text-align: center;
-}
-
-.light-background {
-  background-color: rgb(217, 217, 217);
-}
-
-.dark-background {
-  background-color: rgb(29, 54, 62);
-}
-
-.light-font {
-  color: black;
-}
-.dark-font {
-  color: white;
-}
 .light::after {
   cursor: pointer;
   content: "🌙";
