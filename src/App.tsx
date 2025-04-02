@@ -20,14 +20,6 @@ function App() {
 
   return (
     <div>
-      <div className={theme ? "header-parent dark-background" : "header-parent light-background"}>
-        <div className="header-links">
-          <a href="https://test-beeswarmtools.netlify.app/" className={theme ? "dark-font" : "light-font"}>Home</a>
-          <a href="https://www.roblox.com/games/15303115945/a#!/store" target="_blank" className={theme ? "dark-font" : "light-font"}>Donate Me</a>
-          <a href="https://beeswarmtools.netlify.app/" className={theme ? "dark-font" : "light-font"}>Normal Mode</a>
-        </div>
-        <div className={theme ? "header-message dark-font" : "header-message light-font"}>This website is mainly for testing purposes, before the official release in the main website</div></div>
-    <div>
       <div
         className="main-parent-container"
         style={{
